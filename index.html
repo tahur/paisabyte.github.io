@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>PaisByte</title>
+  </head>
+  <body>
+    <!-- TOP NAVIGATION -->
+    <nav>
+      <p class="welcome">
+        Stock average calculator</p>
+        <img src="logo.png" alt="Logo" class="logo" />
+      </p>
+    </nav>
+
+    <main class="app">
+      <!-- BALANCE -->
+      <div class="balance">
+        <div>
+          <h2 class="balance__label">Enter the trades</h2>
+          <!-- <p class="balance__date">
+            As of <span class="date">05/03/2037</span>
+          </p> -->
+        </div>
+       
+      </div>
+
+      <!-- MOVEMENTS -->
+      <div class="movements">
+        <div class="movements__row ">
+          <form class="form form--transfer">
+          <button class="form__btn form__btn--transfer">Trade : 1</button>
+          <input type="number" class="form__input form__input--to qty-1" />
+          <input type="number" class="form__input form__input--amount price-1" />
+          <label class="form__label"></label>
+          <label class="form__label">Quantity</label>
+          <label class="form__label">Price</label>
+        </form>
+
+        </div>
+        <div class="movements__row ">
+          <form class="form form--transfer">
+          <button class="form__btn form__btn--transfer">Trade : 2</button>
+          <input type="number" class="form__input form__input--to qty-2" />
+          <input type="number" class="form__input form__input--amount price-2" />
+          <label class="form__label"></label>
+          <label class="form__label">Quantity</label>
+          <label class="form__label">Price</label>
+        </form>
+
+        </div>
+      </div>
+
+      <!-- SUMMARY -->
+      <div class="summary">
+        
+        <p class="summary__label">Total traded value</p>
+        
+        <p class="summary__value summary__value--in">0000</p>
+        <p class="summary__label">Total Quantity</p>
+        <p class="summary__value summary__value--out">0000</p>
+       
+      </div>
+
+      <!-- OPERATION: TRANSFERS -->
+
+          <!-- OPERATION: LOAN -->
+      <div class="operation operation--loan ">
+        <div class="final__average">
+          <h2 class="">Final average</h2>
+         <p class="balance__value">000</p>
+        </div>
+      
+         <!-- <h3>Traded value</h3> -->
+      </div>
+
+
+      <div class="calwrapper">
+ 
+   <button type="button" class=" btn " id="btn--lg">Calculate</button>
+   <button class="btn">Add trade</button>
+
+        
+        <!-- <form class="form form--transfer">
+          <input type="text" class="form__input form__input--to" />
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <label class="form__label">Transfer to</label>
+          <label class="form__label">Amount</label>
+        </form> -->
+      </div>
+
+  
+
+      <!-- OPERATION: CLOSE -->
+      <div class="">
+      </div>
+
+      <!-- LOGOUT TIMER -->
+    
+    </main>
+
+    <!-- <footer>
+      &copy; by Jonas Schmedtmann. Don't claim as your own :)
+    </footer> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
