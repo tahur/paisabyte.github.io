@@ -54,19 +54,31 @@ ul {
   list-style: none;
 }
 
-/* header {
+nav {
   width: 120rem;
-} */
+  margin: 0 auto;
+  background-color: white;
+}
+header {
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+footer {
+  text-align: center;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(241 245 249);
+
   height: 7.6rem;
   padding: 0 4.8rem;
   border-color: rgb(249 250 251);
 }
-
+.logo {
+  font-size: 4rem;
+  font-weight: 600;
+}
 .menu > .list {
   display: flex;
   gap: 3.2rem;
