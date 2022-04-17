@@ -55,7 +55,7 @@ ul {
 }
 
 nav {
-  width: 120rem;
+  width: 80rem;
   margin: 0 auto;
   background-color: white;
 }
@@ -100,19 +100,24 @@ footer {
   color: #e67e22;
 } */
 
+.card {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border-radius: 0.5rem;
+}
 .parent {
   display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-template-rows: auto repeat(3, 18rem) auto;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: 5rem repeat(3, 1fr) 5rem;
   /* grid-template-rows: 0.5fr repeat(3, 1fr) 0.5fr; */
   gap: 2rem;
   position: relative;
   max-width: 100rem;
   margin: 4rem auto;
+  max-height: 100rem;
 }
 
 .div-lable {
-  grid-column: 1 / span 1;
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 .div-lable {
@@ -121,28 +126,22 @@ footer {
   text-align: center;
 }
 .trade-list-wrapper {
-  grid-row: 2 / span 3;
+  grid-area: 2 / 1 / 5/ 2;
   border-radius: 0.5rem;
   overflow: scroll;
   scroll-behavior: smooth;
   background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
   text-align: center;
+  max-height: 50rem;
 }
 .bottom-buttons-wrapper {
-  grid-row: 5 / span 1;
+  grid-area: 5 / 1 / 6 / 2;
 }
 .trade-calc-wrapper {
   grid-area: 2 / 2 / 3 / 3;
 }
-.div5 {
-  grid-area: 3 / 2 / 4 / 3;
-  /* border: 1px solid red; */
-}
-.div6 {
-  grid-area: 4 / 2 / 5 / 3;
-  /* border: 1px solid red; */
-}
+
 .error {
   margin-top: 1rem;
   font-size: 1.5rem;
@@ -195,7 +194,7 @@ footer {
   color: #1f2937;
   font-size: 1.5rem;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 300;
 }
 
@@ -205,8 +204,6 @@ footer {
 
 .trade-calc {
   background-color: #ffffff;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  border-radius: 5px;
   text-align: center;
   width: 300px;
   height: 100%;
@@ -240,18 +237,6 @@ footer {
   font-weight: 600;
 }
 
-.trade-calc-btn {
-  background-color: #10b981;
-  margin-top: 1rem;
-  border: none;
-  height: 3.5rem;
-  text-transform: uppercase;
-  border-radius: 5px;
-  transform: all 0.3s;
-  color: #f1f1f1;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-}
 .trade-calc-btn:hover {
   background-color: #059669;
 }
@@ -282,7 +267,7 @@ footer {
 
 .bottom-buttons-wrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 3rem;
   padding: 0 2.5rem;
 }
@@ -290,17 +275,36 @@ footer {
   width: 10rem;
   height: 3.5rem;
   border-radius: 5px;
-  border: none;
-  outline: 2px solid tomato;
+  text-transform: uppercase;
+  color: #6b7280;
+  /* border: none;
+  outline: 2px solid tomato; */
   background-color: white;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   transition: all 0.3s;
 }
 
 .btn:hover {
-  background-color: tomato;
-  color: white;
+  /* background-color: tomato; */
+
   transform: translateY(2px);
+}
+
+.btn-outline {
+  background-color: white;
+  border: 2px solid #38bdf8;
+}
+.btn-lg {
+  width: 25rem;
+  background-color: #3b82f6;
+  border: none;
+  height: 3.5rem;
+  color: #f1f1f1;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+.btn-lg:hover {
+  background-color: #38bdf8;
 }
 /* 
 .btn-control:hover {
@@ -345,4 +349,54 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  .parent {
+    display: grid;
+    grid-template-columns: 1 fr;
+    grid-template-rows: 15rem 5rem repeat(2, auto) 10rem;
+    gap: 1rem;
+  }
+
+  .trade-calc-wrapper {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    font-size: 1rem;
+  }
+  .trade-calc {
+    margin: 0 auto;
+  }
+  .trade-avg {
+    font-size: 3rem;
+  }
+  .total-label {
+    font-size: 1.5rem;
+  }
+  .div-lable {
+    grid-column: 2 / 1;
+    grid-row: 2/3;
+    font-size: 1.2rem;
+  }
+  .trade-list-wrapper {
+    grid-row: 3/5;
+    margin: 0 5rem;
+  }
+  .trade-input {
+    font-size: 1.2rem;
+  }
+  .trade-item-row {
+    padding: 1.5rem;
+  }
+  .trade-tag {
+    font-size: 1.2rem;
+  }
+  .bottom-buttons-wrapper {
+    position: sticky;
+    margin: 2.5rem;
+  }
 }
